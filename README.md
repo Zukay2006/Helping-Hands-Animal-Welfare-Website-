@@ -1,3 +1,5 @@
+Please kindly scroll down to be able to read the CHANGELOG
+
 Helping Hands is a website dedicated to promoting animal welfare. It provides information about the organization, its history, ongoing projects, and ways for people to get involved, such as volunteering or donating.
 Features:
 Responsive design for both desktop and mobile.
@@ -27,3 +29,32 @@ images/ – Folder with all images used
 Author: ZUKS
 
 License: For educational and personal use only.
+
+
+Changelog – Helping Hands Website (Part 1 Corrections)
+Analysis Added
+Wrote a detailed website analysis including the purpose, target audience, and importance of the website.
+Features and Functionality Added
+Created a full list of features for the website: navigation bar, homepage sections, organisation history, mission & vision, team members, success stories, adoption process, volunteer opportunities, donation page, image gallery, references, and social media links.
+Content Research and Sourcing Organized
+Created a research_and_sourcing folder.
+Inside, added a subfolder for each page (index, about, adopt, volunteer, donate, contact).
+Each subfolder now contains:
+text_content.txt → written content for the page.
+images/ → image resources for the page.
+sources.txt → references for text and images.
+Sitemap Created
+Wrote a detailed sitemap document (sitemap.docx) with a breakdown of all website pages and sections.
+Added sitemap to the main project folder (HelpingHandsWebsite/).
+File and Folder Structure Corrected
+Organized all project files into a clear structure:
+Root folder contains main HTML files (index.html, about.html, etc.).
+css/ folder with style.css.
+images/ folder with subfolders for each page.
+research_and_sourcing/ folder with structured content.
+Corrections to Content Issues
+Revised text content to make it relevant, clear, and aligned with the project goals.
+Ensured each page has supporting content in the research_and_sourcing folder.
+Preparation for Part 2
+Finalized Part 1 corrections so that the project is ready for CSS styling and responsive design.
+
