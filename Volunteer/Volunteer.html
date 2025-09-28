@@ -1,81 +1,177 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Volunteer & Donations - Helping Hands</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0 1rem;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+    }
+
+    nav ul li {
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+    }
+
+    h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+    .center {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .responsive-img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .responsive-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff6600;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+    }
+
+    @media (min-width: 992px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.75rem; }
+    }
+  </style>
 </head>
 
 <body>
 
-  
 <!-- =========================
      Navigation
 ========================= -->
+<nav>
+  <ul>
+    <li><a href="../Homepage/Homepage.html">Homepage</a></li>
+    <li><a href="../About us/About us.html">About us</a></li>
+    <li><a href="../Adopt/Adopt.html">Adopt</a></li>
+    <li><a href="Volunteer.html">Volunteer</a></li>
+    <li><a href="../Contact us/Contact us.html">Contact us</a></li>
+  </ul>
+</nav>
 
-  <nav>
-    <ul>
-      <li><a href="../Homepage/Homepage.html">Homepage</a></li>
-<li><a href="../About us/About us.html">About us</a></li>
-<li><a href="../Adopt/Adopt.html">Adopt</a></li>
-<li><a href="../Volunteer/Volunteer.html">Volunteer</a></li>
-<li><a href="../Contact us/Contact us.html">Contact us</a></li>
-    </ul>
-  </nav>
-
-  
 <!-- =========================
      Volunteer Section
 ========================= -->
+<section>
+  <h1>Become a Volunteer</h1>
+  <p>Volunteers are the heart of our rescue work. By giving your time, you help feed, care for, and comfort abandoned animals. From walking dogs to assisting with events, every effort counts.</p>
 
-  <section>
-    <h1>Become a Volunteer</h1>
-    <p>Volunteers are the heart of our rescue work. By giving your time, you help feed, care for, and comfort abandoned animals. From walking dogs to assisting with events, every effort counts.</p>
+  <div class="center">
+    <picture>
+      <source media="(max-width: 600px)" srcset="Images/Volunteers caring for animals-small.jpeg">
+      <source media="(max-width: 992px)" srcset="Images/Volunteers caring for animals-medium.jpeg">
+      <img src="Images/Volunteers caring for animals.jpeg" 
+           alt="Volunteers giving food and care to rescued animals" 
+           class="responsive-img">
+    </picture>
+  </div>
 
-    <img src="C:\Users\zukha\OneDrive\Documents\Helping Hands Website\Volunteer\Images\Volunteers caring for animals.jpeg"
-         alt="Volunteers caring for animals" 
-         class="responsive-img">
+  <h2>Volunteer Tasks</h2>
+  <ul>
+    <li>Feeding and grooming animals</li>
+    <li>Walking and playing with dogs</li>
+    <li>Cleaning cages and kennels</li>
+    <li>Assisting with adoptions and events</li>
+    <li>Sharing love and attention</li>
+  </ul>
 
-    <h2>Volunteer Tasks</h2>
-    <ul>
-      <li>Feeding and grooming animals</li>
-      <li>Walking and playing with dogs</li>
-      <li>Cleaning cages and kennels</li>
-      <li>Assisting with adoptions and events</li>
-      <li>Sharing love and attention</li>
-    </ul>
+  <h2>Call to Action</h2>
+  <p>If you want to join our volunteer family, please fill in the volunteer form. Together, we can give every animal a second chance.</p>
+</section>
 
-    <h2>Call to Action</h2>
-    <p>If you want to join our volunteer family, please fill in the volunteer form. Together, we can give every animal a second chance.</p>
-  </section>
-
-  
 <!-- =========================
      Donations Section
 ========================= -->
+<section>
+  <h1>Donations</h1>
+  <p>Your contributions help us provide food, shelter, and medical care for rescued animals. Every little bit counts!</p>
 
-  <section>
-    <h1>Donations</h1>
-    <p>Your contributions help us provide food, shelter, and medical care for rescued animals. Every little bit counts!</p>
+  <h2>Donation Breakdown</h2>
+  <ul>
+    <li>R100 feeds a puppy for a week</li>
+    <li>R250 provides vaccines for one dog or cat</li>
+    <li>R500 covers medical care for a rescued animal</li>
+    <li>R1000 helps with shelter repairs and supplies</li>
+  </ul>
 
-    <h2>Donation Breakdown</h2>
-    <ul>
-      <li>R100 feeds a puppy for a week</li>
-      <li>R250 provides vaccines for one dog or cat</li>
-      <li>R500 covers medical care for a rescued animal</li>
-      <li>R1000 helps with shelter repairs and supplies</li>
-    </ul>
+  <p>You can also donate items such as kennels, toys, food, blankets, or clothes to ensure our animals are comfortable and well taken care of.</p>
 
-    <p>You can also donate items such as kennels, toys, food, blankets, or clothes to ensure our animals are comfortable and well taken care of.</p>
+  <div class="center">
+    <picture>
+      <source media="(max-width: 600px)" srcset="Images/Donation items for animals-small.jpg">
+      <source media="(max-width: 992px)" srcset="Images/Donation items for animals-medium.jpg">
+      <img src="Images/Donation items for animals.jpg"
+           alt="Donation items such as food, blankets, and toys for rescued animals" 
+           class="responsive-img">
+    </picture>
+  </div>
 
-    <img src="C:\Users\zukha\OneDrive\Documents\Helping Hands Website\Volunteer\Images\Donation items for animals.jpg" 
-         alt="Donation items for animals" 
-         class="responsive-img">
-
-    <p>Image source: <a href="https://www.pinterest.com/free-photos-vectors/social-media-logo" target="_blank">Pinterest</a></p>
-  </section>
+  <p class="center">Image source: <a href="https://www.pinterest.com/free-photos-vectors/social-media-logo" target="_blank">Pinterest</a></p>
+</section>
 
 <!-- =========================
      References
@@ -86,6 +182,23 @@
   <p><a href="https://unsplash.com/s/photos/animal" target="_blank">Unsplash</a></p>
 </section>
 
+<script>
+// Fade-in on scroll
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
 
 </body>
 </html>
