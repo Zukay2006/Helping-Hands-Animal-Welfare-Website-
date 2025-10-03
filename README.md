@@ -95,7 +95,7 @@ Accessibility Enhancements:
 
 Added alt attributes for all images
 
-Used semantic HTML5 elements header, nav, main, footer
+Used semantic HTML5 elements such as: header, nav, main, footer
 
 Ensured sufficient color contrast
 
