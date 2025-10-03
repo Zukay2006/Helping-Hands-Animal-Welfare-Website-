@@ -4,70 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organisation History - Helping Hands</title>
+  <!-- External CSS stylesheet link -->
   <link rel="stylesheet" href="../CSS/style.css">
+
   <style>
     /* ---------------- Base Styles ---------------- */
+    /* General reset + global styles for layout and text */
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif; /* Clean, simple font */
+      font-size: 1rem; /* Default font size */
+      line-height: 1.6; /* Improves readability */
       margin: 0;
       padding: 0 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1200px; /* Keeps content centered for wide screens */
+      margin: 0 auto; /* Centers content horizontally */
     }
 
     header {
-      background-color: #ff6600;
+      background-color: #ff6600; /* Bright orange header background */
       padding: 1rem 0;
-    }
-
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0.5rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-size: 1rem;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #fff;
-      color: #ff6600;
     }
 
     section {
-      margin-bottom: 2rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
+      margin-bottom: 2rem; /* Adds spacing between sections */
+      opacity: 0; /* Hidden at first (fade-in animation) */
+      transform: translateY(20px); /* Slides upward when visible */
+      transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth animation */
       padding: 1rem 0;
     }
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    /* ---------------- Typography Styles ---------------- */
+    /* Animations for headings, paragraphs, lists, and articles */
     h1, h2, p, ul, article {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
+    /* When visible class is added by JavaScript, fade in */
     h1.visible, h2.visible, p.visible, ul.visible, article.visible {
       opacity: 1;
       transform: translateY(0);
@@ -87,33 +61,65 @@
       margin-bottom: 1rem;
     }
 
+    /* ---------------- Visual Styles ---------------- */
+
+    /* Navigation menu styling */
+    nav ul {
+      display: flex; /* Horizontal layout */
+      flex-wrap: wrap; /* Wraps on small screens */
+      list-style: none; /* Removes bullet points */
+      padding: 0;
+      margin: 0;
+      justify-content: center; /* Centers nav items */
+    }
+
+    nav ul li {
+      margin: 0.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #fff; /* White text */
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease; /* Smooth hover effect */
+    }
+
+    nav ul li a:hover {
+      background-color: #fff;
+      color: #ff6600; /* Inverse hover effect */
+    }
+
+    /* Image styling with hover zoom effect */
     img {
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Soft shadow */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255,102,0,0.6);
+      transform: scale(1.05); /* Slight zoom */
+      box-shadow: 0 0 20px rgba(255,102,0,0.6); /* Orange glow */
     }
 
+    /* Utility class for centering content */
     .center {
       text-align: center;
       margin-bottom: 1.5rem;
     }
 
-    /* ---------------- Highlighted Box ---------------- */
+    /* Highlighted info box (Mission & Vision) */
     .highlight {
-      background-color: #fff3e0;
+      background-color: #fff3e0; /* Light orange background */
       padding: 1rem 1.5rem;
-      border-left: 5px solid #ff6600;
+      border-left: 5px solid #ff6600; /* Left border accent */
       margin-bottom: 2rem;
     }
 
-    /* ---------------- Grid Layouts ---------------- */
+    /* Grid layout for team members */
     .team-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -121,18 +127,22 @@
       align-items: start;
     }
 
+    /* Grid layout for success stories */
     .success-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
     }
 
+    /* ---------------- Responsive Design ---------------- */
+    /* Medium screens (tablets) */
     @media(min-width: 600px) {
       h1 { font-size: 2.2rem; }
       h2 { font-size: 1.9rem; }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
+    /* Large screens (desktops) */
     @media(min-width: 992px) {
       h1 { font-size: 2.5rem; }
       h2 { font-size: 2rem; }
@@ -144,6 +154,7 @@
 </head>
 <body>
 
+<!-- ---------------- Header with Navigation ---------------- -->
 <header>
   <nav>
     <ul>
@@ -156,6 +167,7 @@
   </nav>
 </header>
 
+<!-- ---------------- Organisation History ---------------- -->
 <section>
   <h1>Organisation's History</h1>
   <p>
@@ -169,6 +181,7 @@
   </p>
 </section>
 
+<!-- ---------------- Mission & Vision ---------------- -->
 <section class="highlight">
   <h2>Mission</h2>
   <p>
@@ -183,16 +196,20 @@
   </p>
 </section>
 
+<!-- ---------------- Team Members ---------------- -->
 <section>
   <h2>Meet Our Friendly Team Members</h2>
   <div class="team-grid">
+    <!-- Team image -->
     <div class="center">
       <picture>
+        <!-- Responsive images for different screen sizes -->
         <source media="(max-width: 600px)" srcset="../About us/Images/helping-hands-team-small.jpg">
         <source media="(max-width: 992px)" srcset="../About us/Images/helping-hands-team-medium.jpg">
         <img src="../About us/Images/Helping hands team.jpg" alt="Helping Hands team">
       </picture>
     </div>
+    <!-- Team descriptions -->
     <ul>
       <li><strong>Athol Fenderick – Founder & Director:</strong> Oversees all rescue operations and strategy planning.</li>
       <li><strong>Thandiwe Mokoena – Head Veterinarian:</strong> Specializes in treating injured and sick animals and supervising medical care.</li>
@@ -201,9 +218,11 @@
   </div>
 </section>
 
+<!-- ---------------- Success Stories ---------------- -->
 <section>
   <h1>Success Stories</h1>
   <div class="success-grid">
+    <!-- Story 1 -->
     <article>
       <h2>Bella and Her Puppies</h2>
       <div class="center">
@@ -219,6 +238,7 @@
       </p>
     </article>
 
+    <!-- Story 2 -->
     <article>
       <h2>Max Found Love</h2>
       <div class="center">
@@ -236,24 +256,31 @@
   </div>
 </section>
 
+<!-- ---------------- References ---------------- -->
 <section>
   <h2>References</h2>
   <p><a href="https://www.pexels.com/search/animal" target="_blank">Pexels</a></p>
   <p><a href="https://unsplash.com/s/photos/animal" target="_blank">Unsplash</a></p>
 </section>
 
+<!-- ---------------- JavaScript: Fade-in Animation ---------------- -->
 <script>
-  // Fade-in animation on scroll
+  // Wait until page content is loaded
   document.addEventListener("DOMContentLoaded", function() {
+    // Select all elements we want to animate
     const elements = document.querySelectorAll("section, h1, h2, p, ul, article");
+
+    
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
+          // Add "visible" class for fade-in animation
           entry.target.classList.add("visible");
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1 }); // Trigger when 10% of element is visible
 
+    // Observe each element
     elements.forEach(el => observer.observe(el));
   });
 </script>
